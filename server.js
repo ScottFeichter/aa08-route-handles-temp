@@ -38,12 +38,14 @@ const server = http.createServer((req, res) => {
       res.statusCode = 200;
       res.setHeader('Content-Type', 'text/plain');
       res.write(`Dog Club`);
+      return res.end();
     }
 
     if (req.method === `GET` && req.url === `/dogs`) {
       res.statusCode = 200;
       res.setHeader('Content-Type', 'text/plain');
       res.write(`Dog index`);
+      return res.end();
     }
 
     // Do not edit below this line
