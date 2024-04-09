@@ -34,6 +34,17 @@ const server = http.createServer((req, res) => {
     // Do not edit above this line
 
     // define route handlers here
+    if (req.method === `GET` && req.url === `/`) {
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/plain');
+      res.write(`Dog Club`);
+    }
+
+    if (req.method === `GET` && req.url === `/dogs`) {
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/plain');
+      res.write(`Dog index`);
+    }
 
     // Do not edit below this line
     // Return a 404 response when there is no matching route handler
